@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura Index — MacKenzie Drury</title>
+<style>
+:root {
+  --pf-bg: #0d1117;
+  --pf-bg-secondary: #161b22;
+  --pf-text: #e6edf3;
+  --pf-text-muted: #8b949e;
+  --pf-accent: #58a6ff;
+  --pf-accent-hover: #79c0ff;
+  --pf-accent-light: #1a2332;
+  --pf-border: #30363d;
+  --pf-card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --pf-font-body: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif;
+  --pf-font-heading: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif;
+  --pf-font-mono: &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace;
+  --pf-font-size-base: 1rem;
+  --pf-line-height: 1.6;
+  --pf-max-width: 960px;
+  --pf-radius: 8px;
+  --pf-grid-columns: repeat(auto-fill, minmax(280px, 1fr));
+  --pf-grid-gap: 1.5rem;
+  --pf-hero-padding: 4rem 0 3rem;
+  --pf-badge-bg: #1a2332;
+  --pf-badge-text: #58a6ff;
+}
+
+/* Portfolio site base styles */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--pf-font-body);
+  background: var(--pf-bg);
+  color: var(--pf-text);
+  line-height: var(--pf-line-height);
+  font-size: var(--pf-font-size-base);
+  min-height: 100vh;
+}
+
+a { color: var(--pf-accent); text-decoration: none; }
+a:hover { color: var(--pf-accent-hover); text-decoration: underline; }
+
+h1, h2, h3 { font-family: var(--pf-font-heading); }
+
+.pf-container {
+  max-width: var(--pf-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero section */
+.pf-hero {
+  padding: var(--pf-hero-padding);
+  text-align: center;
+  border-bottom: 1px solid var(--pf-border);
+}
+.pf-hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--pf-border);
+}
+.pf-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.pf-hero-headline {
+  font-size: 1.15rem;
+  color: var(--pf-text-muted);
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pf-hero-bio {
+  color: var(--pf-text-muted);
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
+  font-size: 0.95rem;
+}
+.pf-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.pf-social-links a {
+  color: var(--pf-text-muted);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+.pf-social-links a:hover {
+  color: var(--pf-accent);
+  text-decoration: none;
+}
+
+/* Project card grid */
+.pf-projects {
+  padding: 2.5rem 0;
+}
+.pf-projects h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--pf-text);
+}
+.pf-grid {
+  display: grid;
+  grid-template-columns: var(--pf-grid-columns);
+  gap: var(--pf-grid-gap);
+}
+.pf-card {
+  background: var(--pf-bg-secondary);
+  border: 1px solid var(--pf-border);
+  border-radius: var(--pf-radius);
+  padding: 1.25rem;
+  text-decoration: none;
+  color: var(--pf-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-shadow: var(--pf-card-shadow);
+}
+.pf-card:hover {
+  border-color: var(--pf-accent);
+  text-decoration: none;
+}
+.pf-card h3 {
+  font-size: 1.1rem;
+}
+.pf-card-tagline {
+  color: var(--pf-text-muted);
+  font-size: 0.9rem;
+  flex: 1;
+}
+.pf-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+}
+.pf-card-date {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--pf-text-muted);
+}
+.pf-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--pf-badge-bg);
+  color: var(--pf-badge-text);
+}
+
+/* Project detail page */
+.pf-project-detail {
+  padding: 2.5rem 0;
+}
+.pf-back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.pf-project-detail h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+.pf-project-tagline {
+  color: var(--pf-text-muted);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.pf-project-repo {
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+.pf-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+.pf-section-title {
+  font-size: 1.3rem;
+  color: var(--pf-accent);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.pf-text p {
+  margin-bottom: 0.5rem;
+}
+.pf-text ul {
+  padding-left: 1.25rem;
+  margin: 0.25rem 0 0.5rem;
+}
+.pf-text li {
+  margin-bottom: 0.2rem;
+}
+.pf-highlight-card {
+  background: var(--pf-bg-secondary);
+  border: 1px solid var(--pf-border);
+  border-radius: var(--pf-radius);
+  padding: 1rem;
+  margin-top: 0.75rem;
+  box-shadow: var(--pf-card-shadow);
+}
+.pf-highlight-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Figures */
+.pf-figures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+.pf-figure {
+  background: var(--pf-bg-secondary);
+  border: 1px solid var(--pf-border);
+  border-radius: var(--pf-radius);
+  overflow: hidden;
+  box-shadow: var(--pf-card-shadow);
+}
+.pf-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pf-figure figcaption {
+  padding: 0.6rem 0.85rem;
+  font-size: 0.85rem;
+  color: var(--pf-text-muted);
+  border-top: 1px solid var(--pf-border);
+}
+
+.pf-meta {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pf-border);
+  display: flex;
+  gap: 1.25rem;
+  color: var(--pf-text-muted);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+.pf-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--pf-text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--pf-border);
+  margin-top: auto;
+}
+.pf-footer a { color: var(--pf-text-muted); }
+.pf-footer a:hover { color: var(--pf-accent); }
+
+@media (max-width: 640px) {
+  .pf-hero h1 { font-size: 1.5rem; }
+  .pf-project-detail h1 { font-size: 1.4rem; }
+  .pf-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="pf-project-detail">
+  <div class="pf-container">
+    <a class="pf-back-link" href="../index.html">&larr; Back to portfolio</a>
+
+    <h1>Aura Index</h1>
+    
+    <p class="pf-project-tagline">Multi-source ML pipeline for quantifying fashion aesthetics and visual vibes</p>
+    
+    
+    <a class="pf-project-repo" href="https://github.com/mtsdrury/aura-index" target="_blank">View Repository &rarr;</a>
+    
+
+    
+    <div class="pf-tech-badges">
+      
+      <span class="pf-badge" title="Core language for data collection pipelines">Python</span>
+      
+      <span class="pf-badge" title="Training framework for multi-label classification model">PyTorch</span>
+      
+      <span class="pf-badge" title="Vision transformer embeddings for aesthetic encoding">Transformers</span>
+      
+      <span class="pf-badge" title="Collecting real-world fashion photos with community tags">Flickr API</span>
+      
+      <span class="pf-badge" title="Sourcing curated high-signal design references">Are.na API</span>
+      
+    </div>
+    
+
+    
+    <h2 class="pf-section-title">The Problem</h2>
+    <div class="pf-text"><p>Fashion brands and designers need a way to quantify subjective aesthetic concepts like &#34;90s minimalism&#34; or &#34;dark academia&#34; for search, recommendation, and trend analysis. Existing fashion datasets focus on structural attributes (garment type, color) but lack the vocabulary to describe vibes, eras, and aesthetic movements that actually drive style decisions.</p></div>
+    
+
+    
+    <h2 class="pf-section-title">What Was Built</h2>
+    <div class="pf-text"><p>The system combines four complementary data sources to train a multi-label classification model. DeepFashion2 provides 491K annotated images for structural grounding (garment categories, landmarks, shapes). A synthetic dataset generated through OpenArt allows perfect label control for rare aesthetic combinations, encoding specific brand taste without manual annotation. Flickr Creative Commons photos contribute real-world diversity with community-generated tags, filtered by license and weighted by tag specificity. Are.na channels surface high-signal curated references from designers, with connection count serving as a quality signal. The data collection pipeline includes three purpose-built scripts: a prompt generator that creates structured OpenArt queries mapped to known labels, a Flickr collector that filters by Creative Commons license and tag relevance, and an Are.na scraper that discovers and harvests from fashion-focused channels. A custom taxonomy in YAML defines the aesthetic vocabulary (vibes, eras, attributes) that the model learns to recognize. The architecture treats this as a multi-label problem where images can embody multiple aesthetics simultaneously, reflecting how real fashion operates.</p></div>
+    
+
+    
+    <h2 class="pf-section-title">Outcome</h2>
+    <div class="pf-text"><p>The repository provides a complete data collection infrastructure with 1,911 lines of pipeline code across three specialized collectors. The modular design allows brands to customize their aesthetic taxonomy and generate training data that reflects their specific vision. Currently in the data collection phase, with the training architecture documented and ready for implementation.</p></div>
+    
+
+    
+    <h2 class="pf-section-title">Highlights</h2>
+    
+    <div class="pf-highlight-card">
+      <strong>Synthetic Data with Perfect Labels</strong>
+      <div class="pf-text"><p>The OpenArt prompt generator creates structured queries where each generated image maps to known aesthetic labels, eliminating annotation costs. This approach enables training on rare combinations and edge cases that may not exist in real-world datasets, while encoding specific brand taste rather than generic fashion understanding.</p></div>
+    </div>
+    
+    <div class="pf-highlight-card">
+      <strong>Multi-Source Quality Signals</strong>
+      <div class="pf-text"><p>Each data source contributes a distinct signal: DeepFashion2 for structural accuracy, synthetic data for aesthetic precision, Flickr tags for real-world diversity, and Are.na connection counts for curatorial quality. The pipeline weights samples by these intrinsic quality indicators rather than treating all data equally.</p></div>
+    </div>
+    
+    <div class="pf-highlight-card">
+      <strong>Customizable Aesthetic Taxonomy</strong>
+      <div class="pf-text"><p>The YAML-based taxonomy allows brands to define their own aesthetic vocabulary rather than using fixed categories. This flexibility means the same pipeline can train models for streetwear, haute couture, or vintage fashion by simply editing label definitions.</p></div>
+    </div>
+    
+    
+
+    
+
+    
+
+    <div class="pf-meta">
+      <span>Role: owner</span>
+      <span>Complexity: high</span>
+      <span>Status: prototype</span>
+    </div>
+  </div>
+</div>
+
+
+<footer class="pf-footer">
+  <div class="pf-container">
+    Built with <a href="/">DevFolio</a>
+  </div>
+</footer>
+</body>
+</html>
