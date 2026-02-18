@@ -1,0 +1,23 @@
+:root {
+  --pf-bg: #0d1117;
+  --pf-bg-secondary: #161b22;
+  --pf-text: #e6edf3;
+  --pf-text-muted: #8b949e;
+  --pf-accent: #58a6ff;
+  --pf-accent-hover: #79c0ff;
+  --pf-accent-light: #1a2332;
+  --pf-border: #30363d;
+  --pf-card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --pf-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --pf-font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --pf-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --pf-font-size-base: 1rem;
+  --pf-line-height: 1.6;
+  --pf-max-width: 960px;
+  --pf-radius: 8px;
+  --pf-grid-columns: repeat(auto-fill, minmax(280px, 1fr));
+  --pf-grid-gap: 1.5rem;
+  --pf-hero-padding: 4rem 0 3rem;
+  --pf-badge-bg: #1a2332;
+  --pf-badge-text: #58a6ff;
+}
