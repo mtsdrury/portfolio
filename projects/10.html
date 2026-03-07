@@ -3,30 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevFolio — MacKenzie Drury</title>
+<meta property="og:title" content="Job Tracker — MacKenzie Drury">
+<meta property="og:description" content="A job search tracker with CSV backend and modern GUI">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="article">
+<meta name="description" content="MS student in Computational Science and Engineering at Georgia Tech (3.91 GPA), with a BS in Cognitive Science from UCLA. Currently building cloud-based ML pipelines for retinal disease detection at an ML startup and researching decision-making policies in multi-armed bandit tasks for my thesis. My work spans deep learning, statistical modeling, reinforcement learning, and signal processing. I care about building systems that go from research idea to working product.. View MacKenzie Drury's developer portfolio, built with RepoFolio.">
+<title>Job Tracker — MacKenzie Drury</title>
 <style>
 :root {
-  --pf-bg: #0d1117;
-  --pf-bg-secondary: #161b22;
-  --pf-text: #e6edf3;
-  --pf-text-muted: #8b949e;
-  --pf-accent: #58a6ff;
-  --pf-accent-hover: #79c0ff;
-  --pf-accent-light: #1a2332;
-  --pf-border: #30363d;
-  --pf-card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --pf-bg: #2e3440;
+  --pf-bg-secondary: #3b4252;
+  --pf-text: #eceff4;
+  --pf-text-muted: #a0aec0;
+  --pf-accent: #88c0d0;
+  --pf-accent-hover: #8fbcbb;
+  --pf-accent-light: #2e3e4a;
+  --pf-border: #4c566a;
+  --pf-card-shadow: 0 1px 3px rgba(0,0,0,0.25);
   --pf-font-body: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif;
   --pf-font-heading: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif;
   --pf-font-mono: &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace;
   --pf-font-size-base: 1rem;
   --pf-line-height: 1.6;
   --pf-max-width: 960px;
-  --pf-radius: 8px;
+  --pf-radius: 6px;
   --pf-grid-columns: repeat(auto-fill, minmax(280px, 1fr));
   --pf-grid-gap: 1.5rem;
   --pf-hero-padding: 4rem 0 3rem;
-  --pf-badge-bg: #1a2332;
-  --pf-badge-text: #58a6ff;
+  --pf-badge-bg: #2e3e4a;
+  --pf-badge-text: #88c0d0;
 }
 
 /* Portfolio site base styles */
@@ -274,6 +281,66 @@ h1, h2, h3 { font-family: var(--pf-font-heading); }
   .pf-project-detail h1 { font-size: 1.4rem; }
   .pf-grid { grid-template-columns: 1fr; }
 }
+
+/* Contact form */
+.pf-contact-form {
+  max-width: 480px;
+  margin-top: 1.5rem;
+}
+.pf-contact-field {
+  margin-bottom: 1rem;
+}
+.pf-contact-field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--pf-text-muted);
+}
+.pf-contact-field input,
+.pf-contact-field textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--pf-border);
+  border-radius: var(--pf-radius);
+  background: var(--pf-bg-secondary);
+  color: var(--pf-text);
+  font-family: var(--pf-font-body);
+  font-size: 0.95rem;
+}
+.pf-contact-field textarea {
+  resize: vertical;
+}
+.pf-contact-submit {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: var(--pf-radius);
+  background: var(--pf-accent);
+  color: var(--pf-bg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.pf-contact-submit:hover {
+  background: var(--pf-accent-hover);
+}
+.pf-contact-flash {
+  padding: 0.75rem 1rem;
+  border-radius: var(--pf-radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.pf-contact-flash-success {
+  background: rgba(40, 167, 69, 0.15);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #28a745;
+}
+.pf-contact-flash-error {
+  background: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #dc3545;
+}
 </style>
 
 </head>
@@ -283,78 +350,73 @@ h1, h2, h3 { font-family: var(--pf-font-heading); }
   <div class="pf-container">
     <a class="pf-back-link" href="../index.html">&larr; Back to portfolio</a>
 
-    <h1>DevFolio</h1>
+    <h1>Job Tracker</h1>
     
-    <p class="pf-project-tagline">Automated portfolio generator that converts GitHub repositories into formatted write-ups</p>
+    <p class="pf-project-tagline">A job search tracker with CSV backend and modern GUI</p>
     
     
-    <a class="pf-project-repo" href="https://github.com/mtsdrury/devfolio" target="_blank">View Repository &rarr;</a>
+    <a class="pf-project-repo" href="https://github.com/mtsdrury/job-tracker" target="_blank">View Repository &rarr;</a>
     
 
     
     <div class="pf-tech-badges">
       
-      <span class="pf-badge" title="Async web framework with session management">FastAPI</span>
+      <span class="pf-badge" title="Core application logic and CLI">Python</span>
       
-      <span class="pf-badge" title="Async ORM with Alembic migrations">SQLAlchemy</span>
+      <span class="pf-badge" title="GUI built with ttkbootstrap theming">tkinter</span>
       
-      <span class="pf-badge" title="LLM integration for repository analysis">Claude API</span>
+      <span class="pf-badge" title="Single-file storage, no external database">CSV</span>
       
-      <span class="pf-badge" title="Authentication and repository access">GitHub OAuth</span>
-      
-      <span class="pf-badge" title="Template rendering for HTML and Markdown">Jinja2</span>
-      
-      <span class="pf-badge" title="Async test suite with mocked HTTP">pytest</span>
+      <span class="pf-badge" title="Bundles app into standalone executable">PyInstaller</span>
       
     </div>
     
 
     
     <h2 class="pf-section-title">The Problem</h2>
-    <div class="pf-text"><p>Developers need polished portfolio entries for personal websites, but writing them manually from code is tedious and inconsistent. Extracting meaningful technical narratives from repositories requires understanding architecture, ownership context, and what makes a project interesting to showcase.</p></div>
+    <div class="pf-text"><p>Job seekers need to track applications, referrals, and follow-ups without the overhead of databases or cloud accounts. Spreadsheets work but quickly become unwieldy as applications pile up and referral outreach gets lost in rows. A lightweight tool that keeps everything in one CSV file while providing structured views and automated action items solves this.</p></div>
     
 
     
     <h2 class="pf-section-title">What Was Built</h2>
     <div class="pf-text"><ul>
-<li>OAuth flow authenticates users and fetches their GitHub repositories</li>
-<li>Analysis pipeline clones repos, samples files strategically, and detects tech stack from dependencies and extensions</li>
-<li>Ownership calculator determines contribution level by analyzing commit authorship and fork status</li>
-<li>Structure analyzer builds directory trees and counts LOC across file types</li>
-<li>Claude API receives context (ownership, structure, file samples) with a structured prompt tuned for third-person portfolio writing</li>
-<li>Background tasks handle long-running analyses without blocking requests</li>
-<li>Database tracks analysis status with granular progress states (cloning, analyzing, generating)</li>
-<li>Export service renders results to Markdown or standalone HTML using Jinja2 templates</li>
-<li>Rate limiting prevents abuse by tracking analysis requests per user and mode</li>
+<li>The system stores all job data in a single CSV with 15 columns covering company, role, status, referrals, cover letters, and notes</li>
+<li>A CLI (tracker.py) provides commands for adding jobs, updating fields, filtering, and generating summary reports with visual charts</li>
+<li>The GUI (gui.py) uses a mixin architecture where TrackerApp composes functionality from ListTabMixin, DetailTabMixin, ActionsMixin, and others</li>
+<li>Five tabs organize views: a filterable job list, a detail editor, an actions panel that flags stale applications and un-messaged referrals, an analytics dashboard, and a chat interface</li>
+<li>Referral management supports multiple contacts per job with separate fields for LinkedIn URLs, connection notes, and outreach status, all stored in semicolon-delimited strings</li>
+<li>The detail tab uses a scrollable canvas to display all 15 fields as entry widgets, with a file browser for cover letters and inline referral management</li>
+<li>Auto-fill extracts company, role, and location from pasted job URLs by parsing schema.org JSON-LD when available</li>
+<li>PyInstaller packages the app into a standalone .exe with no Python installation required, using a custom spec file in src/packaging/</li>
 </ul></div>
     
 
     
     <h2 class="pf-section-title">Outcome</h2>
-    <div class="pf-text"><p>The system produces ready-to-use portfolio entries with problem statements, architecture descriptions, and technical highlights. Both quick and deep analysis modes are supported. Users can export to Markdown for static sites or HTML for immediate use.</p></div>
+    <div class="pf-text"><p>The tool runs as either a CLI or GUI, with a distributable Windows executable that creates a blank CSV on first launch. The GUI handles filtering by status and referral state, auto-detects incomplete fields, and generates weekly reports with action items. The architecture keeps all logic in pure Python with zero external dependencies beyond ttkbootstrap for theming.</p></div>
     
 
     
     <h2 class="pf-section-title">Highlights</h2>
     
     <div class="pf-highlight-card">
-      <strong>Multi-stage analysis pipeline</strong>
-      <div class="pf-text"><p>The pipeline in `analysis/pipeline.py` orchestrates five distinct phases with status updates at each step. File sampling uses a tiered strategy (always include root configs, sample subdirectories proportionally) to stay within token limits while preserving project structure. Tech detection combines dependency parsing with file extension heuristics to build a complete stack profile.</p></div>
+      <strong>Mixin-based GUI composition</strong>
+      <div class="pf-text"><p>TrackerApp inherits from eight mixin classes (ListTabMixin, DetailTabMixin, ActionsMixin, etc.) to separate concerns. Each mixin owns a single tab&#39;s logic and widgets. This keeps app.py under 200 lines while supporting five distinct views with shared state.</p></div>
     </div>
     
     <div class="pf-highlight-card">
-      <strong>Structured LLM prompting</strong>
-      <div class="pf-text"><p>The prompt in `analysis/prompts.py` constrains Claude to output valid JSON matching a Pydantic schema. Token budget enforcement and explicit voice guidelines (third person, no em dashes, bullet points for structure) ensure consistent formatting. The prompt includes ownership context so generated entries reflect actual contribution level.</p></div>
+      <strong>Referral pipeline tracking</strong>
+      <div class="pf-text"><p>Each job stores multiple referrals as semicolon-delimited strings across four CSV columns: names, LinkedIn URLs, connections, and statuses. The GUI provides a popup form to add referrals and tracks outreach progression (Has Referral, Messaged, Submitted). The actions tab flags jobs with referrals that have not been contacted yet.</p></div>
     </div>
     
     <div class="pf-highlight-card">
-      <strong>Async session-based auth</strong>
-      <div class="pf-text"><p>Authentication uses FastAPI&#39;s SessionMiddleware with CSRF tokens for form submissions. Dependencies in `auth/dependencies.py` check session state and return the current user or redirect to login. GitHub tokens are encrypted at rest using `cryptography.fernet` before storage in the database.</p></div>
+      <strong>Automated action items</strong>
+      <div class="pf-text"><p>The CLI report command and GUI actions tab analyze the CSV to surface stale applications (21+ days in Applied status), un-messaged referrals, and large Not Yet Applied backlogs. Each action item links to the relevant job. This turns passive data into a prioritized task list.</p></div>
     </div>
     
     <div class="pf-highlight-card">
-      <strong>Progressive web interface</strong>
-      <div class="pf-text"><p>HTMX partials handle paginated repository lists and live analysis progress polling without full page reloads. The template in `web/templates/analyze.html` conditionally renders progress bars during processing or the full portfolio result when complete. Search and pagination use server-side rendering with clean URL query params.</p></div>
+      <strong>Schema.org URL parsing</strong>
+      <div class="pf-text"><p>The New Job popup parses pasted URLs to extract company, role, and location from schema.org JSON-LD metadata embedded in job postings. Falls back to basic HTML parsing when structured data is unavailable. Reduces manual entry for each new application.</p></div>
     </div>
     
     
@@ -365,7 +427,7 @@ h1, h2, h3 { font-family: var(--pf-font-heading); }
 
     <div class="pf-meta">
       <span>Role: owner</span>
-      <span>Complexity: high</span>
+      <span>Complexity: medium</span>
       <span>Status: active</span>
     </div>
   </div>
@@ -374,7 +436,7 @@ h1, h2, h3 { font-family: var(--pf-font-heading); }
 
 <footer class="pf-footer">
   <div class="pf-container">
-    Built with <a href="/">DevFolio</a>
+    Built with <a href="/"><img src="/static/favicon.svg" alt="" style="height: 14px; width: 14px; vertical-align: -1px; margin-right: 2px;">RepoFolio</a>
   </div>
 </footer>
 </body>
